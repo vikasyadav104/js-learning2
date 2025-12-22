@@ -34,9 +34,9 @@ console.log(stringconverter)
 //undefined=>undefined
 
 // addd string
-// let str1="vikas"
-// let str2="yadav"
-// console.log(str1+str2)
+let str1="vikas"
+let str2="yadav"
+console.log(str1.concat(str2))
 
 // code that we should not do
 

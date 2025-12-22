@@ -26,7 +26,7 @@ monti.email="monti@gmail.com"
 console.log(vikas.email)
 
 console.log(monti.email)
-// so here on changing the value of monti gamil and vikas gmail is automaticlly gamil
+// so here on changing the value of monti gamil then vikas gmail is automaticlly change
 //it is bcoz of heap
 
-//you can also understand b y the diagram which is present in yur your whatsapp (stack and heap)
+//you can also understand by the diagram which is present in yur your whatsapp (stack and heap)

@@ -10,13 +10,13 @@ const gameName= new String('hiteshhc')
 console.log(gameName)
 console.log(gameName[0])
 console.log(gameName.__proto__);  //we can excess the prototype by first open new window in brave then inspect then console then const gameName= new String('hiteshhc') then console.log(gameName)
-//and after this we get the opetion of prototype
+//and after this we get the opetion of prototype 
 
 
-// but this protottype syntax give only empty bracket so how can be excess all other prototype 
+// but this protottype syntax give only empty bracket which sows that it has many other properties as well
 
 // console.log(gameName.length) //gives lenghth
-// console.log(gameName.toUpperCase()); //this is one of its prototype but orginal value of gamename is not change
+// console.log(gameName.toUpperCase()); //this is one of its prototype but orginal value of gamename is not change bcoz of stack
 // console.log(gameName.italics())
 
 // console.log(gameName.charAt(2)) //it give the char present at index 2

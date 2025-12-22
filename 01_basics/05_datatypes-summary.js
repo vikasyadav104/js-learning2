@@ -6,9 +6,9 @@
 
 // Array, objects, fuction 
 
-// Most important javascript is dynamic language it is bcoz we have not define variable for differnet type of data 
+// Most important-> javascript is dynamic language it is bcoz we have not define variable for differnet type of data 
 //for exmple let a=5
-//a="hello"
+//a="hello" //it means a can be any thing there is no requirement for deciding what kind of data is this
 //a=true 
 
 //SYMBOLLLLL
@@ -31,11 +31,11 @@ const num =37437947398987484377632752868677n // this is bigint so attach n at en
 
 
 //this is how we define object
-let myObj={  //this is how we define object
+let myObj={  
     name: "vikas",
     age:22,
 }
-const heros=["Vikas","Atul","Anmol"]; //this is how we define arrray in javascritp
+const heros=["Vikas","Atul","Anmol"]; //this is how we define arrray in javascript
 const myFunction=  function(){ //this is how we define a function
     console.log("vikasyadav");
 }
