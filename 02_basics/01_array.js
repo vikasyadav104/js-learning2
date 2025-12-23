@@ -46,3 +46,7 @@ console.log(arr2)   //this show that there is no change in arr2 after slice
 console.log(arr2.splice(1,3))  //it give the element from index 1 to 3 but the most important differenee as shown is
 console.log(arr2)   //it also change the parent array and now it has only those element left ehich is not present in splice
 
+
+
+
+
