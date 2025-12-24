@@ -72,3 +72,33 @@ console.log(Object.entries(tinderUser))
 
 //to check is this property available ornot in object
 console.log(Object.hasOwnProperty('isloggedIn'));
+
+
+//destructuring of objects
+
+const course={
+    courseInstructor:"vikas",
+    fees:"5000",
+    institute:"jamshedpur",
+}
+// const {courseInstructor}=course //this is destructuring of object
+//console.log(courseInstructor)
+//we can also assign the samllest name to courseInstructor
+//for example
+const {courseInstructor:inst}=course
+console.log(inst)
+
+//Json and Api 
+
+//json
+// {
+//  "name":"vikas",
+//  "class":"btech",  //actually this give error but not to wry this is crect
+// }
+
+// [
+//     {},
+//     {},
+//     {},
+// ]
+
