@@ -34,5 +34,15 @@ if(true){
 //1st one
 
 
-fu
+function addone(num){
+    return num+1
 
+}
+
+console.log(addone(5))
+
+// const addtwo=function(num){
+//     return num+2
+// }
+
+// console.log(addtwo(5)) /this work fine but if i give this cmmanad before function then it will noy wrok
