@@ -53,4 +53,12 @@ val1=undefined ?? 15 //it also neglet undefined
 console.log(val1) //it print val1
 
 
- 
+ //Ternary Operator
+
+ //condition ? true: false
+
+ //for example
+
+ const icePrice= 100
+ icePrice>=80 ?console.log("less than 80") :  console.log("more than 80")                                               
+
