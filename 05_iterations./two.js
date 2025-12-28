@@ -8,7 +8,10 @@ let cnt=10
 
 //do while loop
 do{
-    console.log(cnt)
-    cnt++;
+    console.log(cnt)   
+
+    cnt++;  
+   
    
 } while(cnt<=20);
+                      
