@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai or code |DOM</title>
+</head>
+<body style="background-color: #212121;">
+    <ul class="language" style="color:aliceblue">
+        <li >javascript</li>
+    </ul>
+    
+</body>
+<script>
+    //this is one way but not optimize  foradding the text
+    function language(langName){
+    const li=document.createElement('li')
+    li.innerText=`chai or code ${langName}`
+    document.querySelector('.language').appendChild(li)
+    }
+   language('python')
 
+   //this is omtimize way for this for adding the text
+
+   function language2(langName){
+    const li=document.createElement('li')
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(li)
+   }
+   language2('code')
+
+
+   //edit the prewrite text in code
+   //if lets ssay i want to edit second line code in it
+
+   const secondlang= document.querySelector("li:nth-child(2)")
+   const newli=document.createElement('li')
+   newli.innerText="vikas"
+   secondlang.replaceWith(newli)
+   
+
+   //edit it in some other way
+    const firstlang=document.querySelector("li:first-child")
+    firstlang.outerHTML='<li>vikas_yadav</li>'
+
+
+</script>
+</html>
