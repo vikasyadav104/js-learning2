@@ -26,4 +26,44 @@ button.forEach(function(button){
       body.style.backgroundColor=e.target.id;
     }
   })
-}) //project1//
+}) 
+
+
+##project 2
+
+const form=document.querySelector('form')
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const height=parseInt(document.querySelector('#height').value)
+  const weight=parseInt(document.querySelector('#weight').value)
+  const result=document.querySelector('#results')
+
+  if(height=='' || height<0 || isNaN(height)){
+    result.innerHTML="please give valid height";
+    
+  }
+  else if(weight=='' || weight<0 || isNaN(weight)){
+    result.innerHTML="please give valid weight";
+    
+  }
+  else{
+    const ans= weight/((height*height)/10000).toFixed(2);
+    
+    let category=''
+    if(ans<18.6){
+      category="Under Weight";
+    }
+    else if(ans>18.6 && ans<24.9){
+      category="Normal range";
+    }
+    else{
+      category="Overweight";
+    }
+    result.innerHTML=`so you have <span>${ans}</span> and you lied ${category}`;
+
+  }
+ 
+
+
+})
