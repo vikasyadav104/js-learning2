@@ -1,6 +1,7 @@
 #project 1
 
 #color grading
+...Javascript
 
 const button=document.querySelectorAll('.button');
 // console.log(button)
@@ -28,8 +29,12 @@ button.forEach(function(button){
   })
 }) 
 
-
+...
 ##project 2
+
+
+...javascript
+
 
 const form=document.querySelector('form')
 form.addEventListener('submit', function(e){
@@ -67,3 +72,16 @@ form.addEventListener('submit', function(e){
 
 
 })
+
+
+...
+
+##project 3
+
+
+
+const clock=document.querySelector('#clock')
+setInterval(function(){
+  let date=new Date();
+  clock.innerHTML=date.toLocaleTimeString();
+},1000)
