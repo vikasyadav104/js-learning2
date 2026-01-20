@@ -26,4 +26,4 @@ button.forEach(function(button){
       body.style.backgroundColor=e.target.id;
     }
   })
-})
+}) //project1//
