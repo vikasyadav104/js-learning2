@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById("owl").onclick=function(){
+    //     alert("You clicked on the owl image!");
+    // }  //but this is also a bad way
+
+
+    //best way to add event listener
+    // document.getElementById("owl").addEventListener("click", function(){
+    //     alert("You clicked on the owl image!");
+    // })
+
+    //in this event listner we can use e in function
+
+    document.getElementById("owl").addEventListener("click", function(e){
+        console.log(e);
+    },false) //false is default value of useCapture default means if there is no value then false will be taken
+
+    //in event listner we can use type,timespan, defaultprvented
+    //target, toElement, srcElement, clientX, clientY, pageX, pageY, screenX, screenY, offsetX, offsetY
+    //altkey, ctrlKey, shiftKey, metaKey,keyCode
+
+
+
+    //now we will study about how event propogation works in js;
+
+    //it is done by two ways
+    //1. event bubbling
+    //2. event capturing
+
+    //as we see uppper in addEventListener we have a third parameter which is useCapture, if we set it to true then event capturing will happen and if we set it to false then event bubbling will happen.
+    //default value of useCapture is false which means event bubbling will happen by default.
+
+    //  document.getElementById("images").addEventListener("click", function(e){
+    //     console.log("you clicked on the images ul");
+    // },false) //-----------------(1)-------------------> event bubbling
+    //  document.getElementById("owl").addEventListener("click", function(e){
+    //     console.log("you clicked on the owl image");
+    //     //if i want to stop propagation of event then i can use e.stopPropagation() method
+    //     e.stopPropagation();
+    // },false) //-----------------(1)-------------------> event bubbling
+
+    // //so here when we click on owl image then first event will be triggered which is"you clicked on the owl image" and then event will be propagated to parent element which is ul and then event will be triggered which is "you clicked on the images ul" this is called event bubbling.
+
+    //  //so we can learn that like bubble goes from bottom to top in event bubbling and in event capturing bubble goes from top to bottom.
+
+
+    // if i want to remove image after clicking on it then i can use remove() method
+
+    document.querySelector("#images").addEventListener("click", function(e){
+        console.log(e.target.parentNode); //this will give us the element which is clicked
+     let remove=e.target.parentNode; //this will give us the li element which is parent of img element
+        remove.remove(); //this will remove the li element which is parent of img element
+    })
+    
+
+
+
+</script>
+</html>
