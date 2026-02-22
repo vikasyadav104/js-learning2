@@ -8,6 +8,7 @@
 <body>
     <h1> chai and code</h1>
     <button id="stop"> stop</button>
+    <button id="start"> start</button>
 
 </body>
 <script>
@@ -33,9 +34,28 @@ const change=setTimeout(changetext,2000);
 
 //here we have button
 
-document.querySelector('#stop').addEventListener('click',function(){
-    clearTimeout(change)
-    console.log("stopped")
+// document.querySelector('#stop').addEventListener('click',function(){
+//     clearTimeout(change)
+//     console.log("stopped")
+// })
+
+function sayDate(str){
+    console.log(str, Date.now());
+}
+
+let intervalId;  // global variable
+
+document.querySelector('#start').addEventListener('click', function(){
+   if (!intervalId) {   // prevent multiple intervals
+       intervalId = setInterval(sayDate, 1000, 'hi');
+       console.log("Started:", intervalId);
+   }
+})
+
+document.querySelector('#stop').addEventListener('click', function(){
+   clearInterval(intervalId);
+   intervalId = null;  // reset
+   console.log("Stopped");
 })
 </script>
 </html>
