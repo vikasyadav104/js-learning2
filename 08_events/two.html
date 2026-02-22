@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> chai and code</h1>
+    <button id="stop"> stop</button>
+
+</body>
+<script>
+//     setTimeout(function(){
+// console.log("vikas")
+//     },2000) // after 2 sec on inspect window, vikas will be shown 
+
+//we can  also do this by declare a constant for function
+
+const sayVikas=function(){
+    console.log("vikas")
+}
+const changetext=function(){
+document.querySelector('h1').innerHTML="best js series"
+}
+// setTimeout(changetext,2000) // so after 2 sec of window chai and code will change into best js series
+
+
+const change=setTimeout(changetext,2000);
+
+
+//we can also stop this calling
+
+//here we have button
+
+document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(change)
+    console.log("stopped")
+})
+</script>
+</html>
