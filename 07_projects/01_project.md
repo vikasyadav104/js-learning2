@@ -87,7 +87,66 @@ setInterval(function(){
 },1000)
 
 ```
-
-## project 4
-
+## project 5
 ```javascript
+// console.log('Project 5');
+
+const insert= document.getElementById('insert');
+window.addEventListener('keydown', (e)=>{
+  insert.innerHTML=`
+  <table>
+  <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key===" "? 'space': e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.Code}</td>
+  </tr>
+
+</table>
+  
+  `
+})
+
+
+
+
+```
+
+## project 6
+```javascript 
+
+const randomcolor=function(){
+  let color='#'
+  const hex='0123456789ABCDEF'
+  for(let i=0; i<6; i++){
+    color+=hex[Math.floor(Math.random()*16)];
+  }
+  return color
+}
+let interval
+
+const startchangingcolor=function(){
+
+  const random=function(){
+  document.body.style.backgroundColor=randomcolor();
+  }
+  if(!interval){
+  interval =setInterval(random,1000);
+  }
+}
+const stopchangingcolor=function(){
+  clearInterval(interval);
+  interval=null
+}
+
+document.querySelector("#start").addEventListener('click',startchangingcolor);
+document.querySelector("#stop").addEventListener('click',stopchangingcolor);
+
+```
+
+
+
